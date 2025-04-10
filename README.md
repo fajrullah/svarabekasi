@@ -52,12 +52,12 @@ git clone https://github.com/your-username/svara-bekasi.git
 cd svarabekasi
 ```
 
-2. Install Dependencies
+### 2. Install Dependencies
 ```bash
 npm install
 ```
 
-3. Install & Run Ollama
+### 3. Install & Run Ollama
 
 ```bash
 Install Ollama from: https://ollama.com/download
@@ -70,7 +70,7 @@ ollama run llama2
 This will start Ollama on default: http://localhost:11434
 ```
 
-4. Run the Backend (NestJS)
+### 4. Run the Backend (NestJS)
 
 ```bash
 cd apps/server
@@ -78,7 +78,7 @@ npm start:dev
 The backend NestJS API will be live at http://localhost:3000.
 ```
 
-5. Run the Frontend (Next.js)
+### 5. Run the Frontend (Next.js)
 
 ```bash
 cd apps/client
@@ -86,18 +86,18 @@ npm run dev
 Access the UI via http://localhost:3001 (or whatever port is configured).
 ```
 
-🧪 Testing the API
+## 🧪 Testing the API
 You can test the backend directly with curl:
 
-bash
-Copy
-Edit
+```bash
 curl -X POST http://localhost:3000/chat \
   -H "Content-Type: application/json" \
   -d '{"prompt": "Apa itu KTP?"}'
 This should return a response from the local LLM through Ollama.
+```
 
-🛡️ Security Notes
+## 🛡️ Security Notes
+
 The current version does not implement rate limiting or authentication.
 
 Consider adding guard mechanisms in production.

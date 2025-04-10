@@ -50,7 +50,7 @@ apps/
 ## 🚀 Getting Started
 1. Clone the Repository
 ```bash
-git clone https://github.com/fajrullah/svara-bekasi.git
+git clone https://github.com/fajrullah/svarabekasi.git
 cd svarabekasi
 ```
 

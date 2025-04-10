@@ -56,6 +56,7 @@ cd svarabekasi
 
 ### 2. Install Dependencies
 ```bash
+cd apps
 cd frontend && npm install
 cd backend && npm install
 ```

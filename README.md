@@ -1,10 +1,12 @@
 # Svara Bekasi — The Voice of Bekasi 🏙️💬  
-![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square)  
-![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)  
-![Ollama](https://img.shields.io/badge/ollama-LLaMA2-success?style=flat-square)  
-![Made with NestJS](https://img.shields.io/badge/nestjs-%E2%9D%A4-red?style=flat-square)  
-![Next.js](https://img.shields.io/badge/Next.js-frontend-black?style=flat-square)  
-![Typescript](https://img.shields.io/badge/TypeScript-strong-blue?style=flat-square)
+<p align="center">
+  <img src="https://img.shields.io/badge/build-passing-brightgreen?style=flat-square" />
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" />
+  <img src="https://img.shields.io/badge/ollama-LLaMA2-success?style=flat-square" />
+  <img src="https://img.shields.io/badge/nestjs-%E2%9D%A4-red?style=flat-square" />
+  <img src="https://img.shields.io/badge/Next.js-frontend-black?style=flat-square" />
+  <img src="https://img.shields.io/badge/TypeScript-strong-blue?style=flat-square" />
+</p>
 
 ---
 
@@ -73,15 +75,15 @@ This will start Ollama on default: http://localhost:11434
 ### 4. Run the Backend (NestJS)
 
 ```bash
-cd apps/server
-npm start:dev
+cd apps/backend
+npm run start:dev
 The backend NestJS API will be live at http://localhost:3000.
 ```
 
 ### 5. Run the Frontend (Next.js)
 
 ```bash
-cd apps/client
+cd apps/frontend
 npm run dev
 Access the UI via http://localhost:3001 (or whatever port is configured).
 ```

@@ -43,8 +43,8 @@ Svara Bekasi is an AI-powered chatbot that helps citizens get answers to questio
 
 ```bash
 apps/
-├── client/          # Next.js frontend
-└── server/          # NestJS backend (chat controller/service)
+├── backend/          # NestJS backend (chat controller/service)
+└── frontend/         # Next.js frontend
 ```
 
 ## 🚀 Getting Started

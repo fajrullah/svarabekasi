@@ -15,14 +15,8 @@ export default function ChatWidget() {
   };
 
   return (
-    <div className="w-full max-w-md h-[500px] border rounded-2xl shadow-lg flex flex-col overflow-hidden bg-white dark:bg-zinc-900">
-      {/* Header */}
-      <div className="bg-indigo-600 text-white p-4 text-lg font-semibold">
-        Chat Support
-      </div>
-
-      {/* Message List */}
-      <div className="flex-1 p-4 overflow-y-auto space-y-3 bg-zinc-100 dark:bg-zinc-800">
+    <div className="w-full flex flex-col">
+      <div className="flex-1 p-4 overflow-y-auto space-y-3">
         {messages.map((msg) => (
           <div
             key={msg.id}
@@ -36,9 +30,7 @@ export default function ChatWidget() {
           </div>
         ))}
       </div>
-
-      {/* Input Bar */}
-      <div className="p-3 border-t flex items-center gap-2 bg-white dark:bg-zinc-900">
+      <div className="p-3 flex items-center gap-2">
         <input
           type="text"
           value={input}

@@ -38,7 +38,7 @@ export default function Sidebar() {
   return (
     <div className="flex flex-col h-full">
       {/* Scrollable Questions Section */}
-      <div className="flex-1 overflow-y-auto chat-scrollbar p-4">
+      <div className="flex-1 overflow-y-auto chat-scrollbar py-2 px-4">
         <h2 className="text-lg font-semibold mb-4 text-gray-800">Frequently Asked</h2>
         
         {questionGroups.map((group, groupIndex) => (
@@ -63,11 +63,11 @@ export default function Sidebar() {
       </div>
 
       {/* Sticky Footer */}
-      <div className="sticky bottom-0 border-t border-gray-200 p-4">
+      <div className="sticky bottom-0 p-4">
         <div className="mb-3">
           <p className="text-sm text-gray-600">Need more help?</p>
         </div>
-        <button className="w-full py-2 px-4 rounded-md bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors">
+        <button className="w-full py-2 px-4 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition-colors">
           Contact Support
         </button>
         <div className="mt-3 text-xs text-gray-500 text-center">

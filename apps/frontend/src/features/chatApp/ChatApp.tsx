@@ -18,8 +18,7 @@ export function SidebarControls({ isOpen, toggleSidebar }: {
   toggleSidebar: () => void 
 }) {
   return (
-    <div className="flex items-center gap-4 p-4 border-b border-gray-200">
-      {/* Sidebar Toggle (Icon only) */}
+    <div className="flex items-center gap-4 p-4">
       <button 
         onClick={toggleSidebar}
         className="p-1.5 rounded-lg hover:bg-gray-100 transition-colors"
@@ -52,23 +51,20 @@ export default function ChatApp() {
 
   return (
     <div className="flex w-full h-screen">
-      {/* Sidebar (20%) - DeepSeek exact style */}
       <aside className="w-64 min-w-[200px] flex flex-col">
-        <header className="p-4 text-lg font-semibold">
+        <header className="px-4 py-2 text-lg font-semibold">
           Svara Bekasi
           <SidebarControls 
-          isOpen={isSidebarOpen} 
-          toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} 
+            isOpen={isSidebarOpen} 
+            toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} 
         />
         </header>
         <div className="flex-1 overflow-y-auto">
           <Sidebar />
         </div>
       </aside>
-
-      {/* Main Content (80%) */}
       <main className="flex-1 flex flex-col bg-white">
-        <header className="p-4 text-xl font-bold border-b">
+        <header className="p-4 text-xl font-bold">
           AI Chat Assistant
         </header>
         <section className="flex-1 overflow-y-auto px-[10%]">

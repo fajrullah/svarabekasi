@@ -28,7 +28,7 @@ body {
 /* Add this to your CSS */
 .chat-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #e5e7eb	 #9ca3af; 
+  scrollbar-color: #e5e7eb	 transparent; 
 }
 
 .chat-scrollbar::-webkit-scrollbar {
@@ -36,15 +36,15 @@ body {
 }
 
 .chat-scrollbar::-webkit-scrollbar-track {
-  background: #e5e7eb;
+  background: #fff;
   border-radius: 4px;
 }
 
 .chat-scrollbar::-webkit-scrollbar-thumb {
-  background: #9ca3af;
+  background: #fff;
   border-radius: 4px;
 }
 
 .chat-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
+  background: #fff;
 }

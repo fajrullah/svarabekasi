@@ -52,7 +52,7 @@ export default function ChatApp() {
   return (
     <div className="flex w-full h-screen">
       <aside className="w-64 min-w-[200px] flex flex-col">
-        <header className="px-4 py-2 text-lg font-semibold">
+        <header className="px-4 py-2 text-lg font-semibold text-gray-600">
           Svara Bekasi
           <SidebarControls 
             isOpen={isSidebarOpen} 
@@ -64,8 +64,8 @@ export default function ChatApp() {
         </div>
       </aside>
       <main className="flex-1 flex flex-col bg-white">
-        <header className="p-4 text-xl font-bold">
-          AI Chat Assistant
+        <header className="p-4 text-xl font-bold text-gray-600">
+          Bekasi Bantuin
         </header>
         <section className="flex-1 overflow-y-auto px-[10%]">
           <ChatWidget />

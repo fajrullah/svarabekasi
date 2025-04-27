@@ -3,33 +3,31 @@
 
 const questionGroups = [
   {
-    title: "Account",
+    title: "Layanan Kependudukan",
     questions: [
-      "How to reset my password?",
-      "Can I change my email address?",
-      "How to delete my account?",
-      "Where can I update my profile?",
-      "Why can't I log in?"
+      "Gimana sih cara bikin KTP baru?",
+      "Ngurus KK ribet nggak? Apa aja yang perlu disiapin?"
     ]
   },
   {
-    title: "Billing",
+    title: "Pendidikan & Kesehatan",
     questions: [
-      "Where can I see my billing?",
-      "How do I update payment method?",
-      "Can I cancel anytime?",
-      "Do you offer refunds?",
-      "Where are my invoices?"
+      "Sekolah deket rumah ada yang bagus nggak ya?",
+      "Kalau mau berobat gratis, kemana enaknya?"
     ]
   },
   {
-    title: "Support",
+    title: "Pembayaran & Pajak",
     questions: [
-      "How to contact support?",
-      "What's your response time?",
-      "Do you have phone support?",
-      "Where are the docs?",
-      "Can I book a demo?"
+      "Bayar pajak daerah di mana yang paling gampang?",
+      "Tagihan listrik bisa dibayar online nggak sih?"
+    ]
+  },
+  {
+    title: "Navigasi Kota",
+    questions: [
+      "Kantor pemerintahan deket sini di mana ya?",
+      "Kalau butuh nomor darurat, cari di mana bro?"
     ]
   }
 ];
@@ -39,7 +37,7 @@ export default function Sidebar() {
     <div className="flex flex-col h-full">
       {/* Scrollable Questions Section */}
       <div className="flex-1 overflow-y-auto chat-scrollbar py-2 px-4">
-        <h2 className="text-lg font-semibold mb-4 text-gray-800">Frequently Asked</h2>
+        <h2 className="text-lg font-semibold mb-4 text-gray-600">Yang sering ditanyakan</h2>
         
         {questionGroups.map((group, groupIndex) => (
           <div key={groupIndex} className="mb-6">
@@ -65,10 +63,10 @@ export default function Sidebar() {
       {/* Sticky Footer */}
       <div className="sticky bottom-0 p-4">
         <div className="mb-3">
-          <p className="text-sm text-gray-600">Need more help?</p>
+          <p className="text-sm text-gray-600">Butuh bantuan?</p>
         </div>
         <button className="w-full py-2 px-4 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition-colors">
-          Contact Support
+          Hubungi kami
         </button>
         <div className="mt-3 text-xs text-gray-500 text-center">
           © {new Date().getFullYear()} Svara Bekasi

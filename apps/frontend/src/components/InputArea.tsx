@@ -54,10 +54,13 @@ export default function InputArea({ onSend, selectedService = "General" }: Input
           {/* Left side buttons */}
           <div className="flex gap-2">
             <button className="px-3 py-1 rounded-lg bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 text-xs font-medium">
-              {selectedService}
+              Pembayaran
             </button>
             <button className="px-3 py-1 rounded-lg bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 text-xs font-medium">
-              Services
+              Pajak
+            </button>
+            <button className="px-3 py-1 rounded-lg bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 text-xs font-medium">
+              Pindahan
             </button>
           </div>
           

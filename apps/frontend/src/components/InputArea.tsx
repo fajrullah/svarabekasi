@@ -37,7 +37,7 @@ export default function InputArea({ onSend, selectedService = "General" }: Input
   };
 
   return (
-    <div className="sticky bottom-0 bg-white p-3">
+    <div className="sticky bottom-0 bg-white p-3 w-4xl">
       <div className="relative">
         {/* Textarea with fixed 4 rows */}
         <textarea

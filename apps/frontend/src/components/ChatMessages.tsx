@@ -18,7 +18,7 @@ interface ChatMessagesProps {
 
 export default function ChatMessages({ messages, classNames }: ChatMessagesProps) {
   return (
-    <div className={`flex-1 p-2 overflow-y-auto ${classNames}`}>
+    <div className={`flex-1 p-2 overflow-y-auto scrollable-hidden-scrollbar min-w-sm max-w-4xl ${classNames}`}>
       {messages.map((msg) => (
         <div
           key={msg.id}
@@ -108,7 +108,7 @@ export default function ChatMessages({ messages, classNames }: ChatMessagesProps
         />
         {[
         { id: 5, sender: "user", text: "saya ingin membayar pajak kendaraan B1234ABC" },
-        { id: 5, sender: "bot", text: "Pajak kendaraan B1234ABC adalah sebagai berikut" },
+        { id: 6, sender: "bot", text: "Pajak kendaraan B1234ABC adalah sebagai berikut" },
         ].map((msg) => (
           <div
             key={msg.id}

@@ -25,7 +25,7 @@ export default function ChatWidget() {
   };
   
   return (
-    <div className="w-full h-full flex flex-col">
+    <div className="w-full h-full flex flex-col justify-center items-center">
       <ChatMessages messages={messages} />
       <InputArea onSend={handleSend} selectedService={selectedService} />
     </div>

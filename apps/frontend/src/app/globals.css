@@ -48,3 +48,13 @@ body {
 .chat-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #fff;
 }
+
+.scrollable-hidden-scrollbar {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.scrollable-hidden-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

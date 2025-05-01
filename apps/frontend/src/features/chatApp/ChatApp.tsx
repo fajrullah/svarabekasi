@@ -51,7 +51,7 @@ export default function ChatApp() {
 
   return (
     <div className="flex w-full h-screen">
-      <aside className="w-64 min-w-[200px] flex flex-col">
+      <aside className="w-72 flex flex-col">
         <header className="px-4 py-2 text-lg font-semibold text-gray-600">
           Svara Bekasi
           <SidebarControls 

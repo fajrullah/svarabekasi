@@ -61,9 +61,9 @@ export default function BekasiTaxCalculatorCard() {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-md mx-auto">
+    <div className="bg-white rounded-xl shadow-md max-w-lg">
       {/* Header */}
-      <div className="bg-green-600 p-4 text-white">
+      <div className="bg-indigo-600 p-4 text-white">
         <h2 className="text-xl font-bold text-center">Bekasi Vehicle Tax Calculator</h2>
       </div>
 
@@ -83,7 +83,7 @@ export default function BekasiTaxCalculatorCard() {
               value={plateNumber}
               onChange={(e) => setPlateNumber(e.target.value.toUpperCase())}
               placeholder="1234ABC"
-              className="flex-1 block w-full rounded-none rounded-r-md border-gray-300 focus:border-green-500 focus:ring-green-500"
+              className="flex-1 block w-full rounded-none rounded-r-md border-gray-300 "
               maxLength={8}
             />
           </div>
@@ -97,7 +97,7 @@ export default function BekasiTaxCalculatorCard() {
           <select
             value={vehicleType}
             onChange={(e) => setVehicleType(e.target.value)}
-            className="block w-full rounded-md border-gray-300 focus:border-green-500 focus:ring-green-500"
+            className="block w-full rounded-md border-gray-300 "
           >
             <option value="car">Car</option>
             <option value="motorcycle">Motorcycle</option>
@@ -113,7 +113,7 @@ export default function BekasiTaxCalculatorCard() {
             type="number"
             value={cc}
             onChange={(e) => setCC(parseInt(e.target.value) || 0)}
-            className="block w-full rounded-md border-gray-300 focus:border-green-500 focus:ring-green-500"
+            className="block w-full rounded-md border-gray-300 "
           />
         </div>
 
@@ -121,7 +121,7 @@ export default function BekasiTaxCalculatorCard() {
         <button
           onClick={calculateTax}
           disabled={!plateNumber}
-          className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Calculate Tax
         </button>
@@ -145,7 +145,7 @@ export default function BekasiTaxCalculatorCard() {
             
             <div className="flex justify-between font-bold border-t pt-2 mt-2">
               <span>Total Payable:</span>
-              <span className="text-green-600">Rp {calculation.total.toLocaleString("id-ID")}</span>
+              <span className="text-indigo-600">Rp {calculation.total.toLocaleString("id-ID")}</span>
             </div>
           </div>
         )}

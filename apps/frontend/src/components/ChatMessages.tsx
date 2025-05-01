@@ -98,14 +98,17 @@ export default function ChatMessages({ messages, classNames }: ChatMessagesProps
             </div>
           </div>
         ))}
-        <QRQueueCard
-          queueNumber="A42"
-          serviceName="Antrian Kecamatan Pindahan KK"
-          estimatedTime="11:30 AM - 12:00 PM"
-          qrCodeUrl="/qr_dummy.png"
-          dateTime="Apr 27, 2025 • 10:15 AM"
-          className="max-w-sm mx-auto"
-        />
+        <div className="flex justify-start">
+          <QRQueueCard
+            queueNumber="A42"
+            serviceName="Antrian Kecamatan Pindahan KK"
+            estimatedTime="11:30 AM - 12:00 PM"
+            qrCodeUrl="/qr_dummy.png"
+            dateTime="Apr 27, 2025 • 10:15 AM"
+            className="max-w-sm"
+          />
+        </div>
+        
         {[
         { id: 5, sender: "user", text: "saya ingin membayar pajak kendaraan B1234ABC" },
         { id: 6, sender: "bot", text: "Pajak kendaraan B1234ABC adalah sebagai berikut" },
@@ -125,7 +128,9 @@ export default function ChatMessages({ messages, classNames }: ChatMessagesProps
             </div>
           </div>
         ))}
-        <BekasiTaxCalculatorCard />
+        <div className="flex justify-start">
+          <BekasiTaxCalculatorCard />
+        </div>
       </div>
     </div>
   );

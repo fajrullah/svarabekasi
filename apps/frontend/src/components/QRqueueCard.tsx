@@ -22,7 +22,7 @@ export default function QRQueueCard({
   return (
     <div className={`bg-white rounded-xl shadow-md overflow-hidden ${className}`}>
       {/* Header */}
-      <div className="bg-blue-600 p-4 text-white">
+      <div className="bg-indigo-600 p-4 text-white">
         <h2 className="text-xl font-bold text-center">{serviceName}</h2>
       </div>
 
@@ -45,7 +45,7 @@ export default function QRQueueCard({
         <div className="space-y-4 text-center">
           <div className="space-y-1">
             <p className="text-gray-500 text-sm">Your Queue Number</p>
-            <p className="text-4xl font-bold text-blue-600">{queueNumber}</p>
+            <p className="text-4xl font-bold text-indigo-600">{queueNumber}</p>
           </div>
 
           <div className="grid grid-cols-2 gap-4">

@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from 'react';
-import { PanelLeftClose, PanelLeftOpen, Menu } from 'lucide-react';
+import { PanelLeftClose, PanelLeftOpen } from 'lucide-react';
 import Sidebar from "@/components/Sidebar";
 import ChatWidget from "@/components/ChatWidget";
 
@@ -14,25 +14,20 @@ export default function ChatApp() {
   };
 
   return (
-    <div className="flex w-full h-screen">
-      {/* Sidebar */}
-      <aside className={`
-        ${isSidebarOpen ? 'w-72' : 'w-0'}
-        flex-shrink-0 flex-col border-r border-gray-200 bg-white
-        transition-all duration-300 ease-in-out overflow-hidden
-      `}>
-        <header className="flex items-center justify-between px-4 py-2 text-lg font-semibold text-gray-600">
-          Svara Bekasi
+    <div className="flex w-full h-screen bg-gray-50">
+      {/* Sidebar with display/visibility control */}
+      <aside
+        className={`${isSidebarOpen ? 'block visible' : 'hidden invisible'}
+        w-72 flex-shrink-0 flex-col border-r border-gray-200 bg-white
+        transition-opacity duration-300 ease-in-out`}
+      >
+        <header className="flex items-center justify-between px-4 py-3 text-lg font-semibold text-gray-700">
+          <span>Svara Bekasi</span>
           <button 
             onClick={toggleSidebar}
-            className="p-1 rounded hover:bg-gray-100"
-            aria-label={isSidebarOpen ? "Collapse sidebar" : "Expand sidebar"}
+            className="p-1.5 rounded-lg hover:bg-gray-100"
           >
-            {isSidebarOpen ? (
-              <PanelLeftClose className="w-5 h-5 text-gray-600" />
-            ) : (
-              <PanelLeftOpen className="w-5 h-5 text-gray-600" />
-            )}
+            <PanelLeftClose className="w-5 h-5 text-gray-600" />
           </button>
         </header>
         <div className="flex-1 overflow-y-auto">
@@ -40,21 +35,21 @@ export default function ChatApp() {
         </div>
       </aside>
 
-      {/* Main content */}
-      <main className="flex-1 flex flex-col bg-white overflow-hidden">
-        <header className="flex items-center p-4 text-xl font-bold text-gray-600">
+      {/* Main Content */}
+      <main className={`flex-1 flex flex-col ${isSidebarOpen ? '' : '!ml-0'}`}>
+        <header className="flex items-center p-4 border-b border-gray-200 bg-white">
           {!isSidebarOpen && (
             <button 
               onClick={toggleSidebar}
-              className="mr-2 p-1 rounded hover:bg-gray-100"
-              aria-label="Open sidebar"
+              className="mr-3 p-1.5 rounded-lg hover:bg-gray-100"
             >
-              <Menu className="w-5 h-5 text-gray-600" />
+              <PanelLeftOpen className="w-5 h-5 text-gray-600" />
             </button>
           )}
-          Bekasi Bantuin
+          <h1 className="text-xl font-bold text-gray-700">Bekasi Bantuin</h1>
         </header>
-        <section className="flex-1 overflow-y-auto px-4 md:px-[10%]">
+        
+        <section className="flex-1 overflow-y-auto p-4 md:px-[10%]">
           <ChatWidget />
         </section>
       </main>

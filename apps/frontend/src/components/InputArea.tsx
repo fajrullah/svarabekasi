@@ -39,7 +39,6 @@ export default function InputArea({ onSend, selectedService = "General" }: Input
   return (
     <div className="sticky bottom-0 bg-white p-3 w-4xl">
       <div className="relative">
-        {/* Textarea with fixed 4 rows */}
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
@@ -49,7 +48,6 @@ export default function InputArea({ onSend, selectedService = "General" }: Input
           rows={4}
         />
         
-        {/* Button container at bottom */}
         <div className="absolute bottom-2 left-0 right-0 px-4 py-2 flex justify-between items-center">
           {/* Left side buttons */}
           <div className="flex gap-2">

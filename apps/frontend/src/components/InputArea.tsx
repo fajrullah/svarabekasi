@@ -1,7 +1,7 @@
 // src/components/InputArea.tsx
 "use client";
 import { useState } from "react";
-import { Paperclip, Send } from "lucide-react";
+import { Building, Car, House, IdCard, IndentIcon, Paperclip, Send } from "lucide-react";
 
 interface InputAreaProps {
   onSend: (message: string) => void;
@@ -37,7 +37,7 @@ export default function InputArea({ onSend, selectedService = "General" }: Input
   };
 
   return (
-    <div className="sticky bottom-0 bg-white p-3 w-4xl">
+    <div className="sticky bottom-0 bg-transparent p-3 w-4xl">
       <div className="relative">
         <textarea
           value={input}
@@ -51,14 +51,14 @@ export default function InputArea({ onSend, selectedService = "General" }: Input
         <div className="absolute bottom-2 left-0 right-0 px-4 py-2 flex justify-between items-center">
           {/* Left side buttons */}
           <div className="flex gap-2">
-            <button className="px-3 py-1 rounded-lg bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 text-xs font-medium">
-              Pembayaran
+            <button className="flex items-center gap-1 px-3 py-1 rounded-lg bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 text-xs font-medium">
+              <House size={16} /> Pembayaran PBB
             </button>
-            <button className="px-3 py-1 rounded-lg bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 text-xs font-medium">
-              Pajak
+            <button className="flex items-center gap-1 px-3 py-1 rounded-lg bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 text-xs font-medium">
+              <Car size={16} /> Pajak Kendaraan
             </button>
-            <button className="px-3 py-1 rounded-lg bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 text-xs font-medium">
-              Pindahan
+            <button className="flex items-center gap-1 px-3 py-1 rounded-lg bg-white text-gray-700 hover:bg-gray-100 border border-gray-300 text-xs font-medium">
+              <IdCard /> KTP/KK Pindahan
             </button>
           </div>
           
